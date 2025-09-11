@@ -1,15 +1,24 @@
 import  './App.css';
-const list=["ansh","gapu","anshgaputi"];
+import { useState } from 'react';
+
+
+
 
 function App() {
-     
+     const [age,setAge] = useState(0);
+     const increaseAge=()=>{
+      setAge(age+1  );
+     };
+
   return (
-    
-    <div className="App">
-   {list.map((name,key)=>{
-    return <h1 key={key}> {name} </h1>;
-   })}
+    <div>
+    {age}
+   <button onClick={increaseAge}>increase age</button>
+
+
     </div>
+    
+    
 
 );
 
